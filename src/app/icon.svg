@@ -1,0 +1,6 @@
+<svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <!-- Left Half (Deep Zinc Gray) -->
+  <path d="M10.5 3.2L3.5 12l7 8.8V3.2z" fill="#3f3f46" />
+  <!-- Right Half (Glowing Amber Gold) -->
+  <path d="M13.5 3.2l7 8.8-7 8.8V3.2z" fill="#fbbf24" />
+</svg>
