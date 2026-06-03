@@ -6,7 +6,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "pdfextra",
-  description: "pdf Extractor ",
+  description: "Extract PDF pages online",
+  verification: {
+    google: "tI5BK4hwKuMmhx0NqXCBpW7Atpc8_1WtCFwmYSPGXLQ"
+  }
 };
 
 export default function RootLayout({
@@ -22,3 +25,4 @@ export default function RootLayout({
     </html>
   );
 }
+
