@@ -5,8 +5,9 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "pdfextra",
-  description: "Extract PDF pages online",
+  title: "PDF Extra | Extract PDF Pages Online",
+  description: "Extract pages from any PDF file online with ease. Select pages, split PDFs, and download organized PDF pages instantly.",
+  keywords: ["PDF", "Extract", "PDF Pages", "Split PDF", "Download PDF", "PDF Extractor", "PDF Splitter", "Online PDF Tool"],
   verification: {
     google: "tI5BK4hwKuMmhx0NqXCBpW7Atpc8_1WtCFwmYSPGXLQ"
   }

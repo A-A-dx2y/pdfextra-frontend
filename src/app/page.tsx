@@ -95,14 +95,14 @@ export default function Home() {
           {/* Hero Header */}
           <div className="text-center max-w-3xl mx-auto space-y-6">
             <h1 className="text-5xl sm:text-8xl font-black tracking-tight text-white leading-[1.05] max-w-3xl mx-auto">
-              Extract PDF pages.<br />
+              Extract PDF pages Online.<br />
               <span className="bg-gradient-to-r from-amber-400 via-yellow-250 to-amber-300 bg-clip-text text-transparent">
                 Instantly.
               </span>
             </h1>
             
             <p className="text-zinc-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-              The ultimate secure utility to visually split and extract pages from your documents.
+              Upload your PDF, select the pages you want to keep, and download a new PDF instantly.
             </p>
           </div>
 
