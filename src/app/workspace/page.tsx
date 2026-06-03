@@ -9,11 +9,11 @@ import { PDFPageData } from "../../types/pdf";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-// Resolve worker Src dynamically using standard jsdelivr CDN matching the installed pdfjs-dist version
+
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdn.jsdelivr.net/npm/pdfjs-dist@6.0.227/build/pdf.worker.min.mjs`;
 
 
-// Inline SVG Icons with gold / amber accents
+
 const DocumentIcon = () => (
   <svg className="w-8 h-8 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
@@ -312,7 +312,7 @@ export default function Workspace() {
                 <div className="space-y-1">
                   <h2 className="font-bold text-base text-white">Extraction Successful!</h2>
                   <p className="text-[10.5px] text-zinc-500 flex items-center space-x-2 font-medium">
-                    <span>Your custom slice is ready to download</span>
+                    <span>Your extracted PDF is ready to download</span>
                     <span>•</span>
                     <span>{extractedPagesCount} page{extractedPagesCount > 1 ? "s" : ""} compiled</span>
                   </p>
@@ -333,7 +333,7 @@ export default function Workspace() {
             {renderingResult ? (
               <div className="flex flex-col items-center justify-center py-20 space-y-4">
                 <div className="w-10 h-10 border-4 border-amber-500/10 border-t-amber-500 rounded-full animate-spin" />
-                <p className="text-xs text-zinc-500 font-mono">Parsing Sliced Document...</p>
+                <p className="text-xs text-zinc-500 font-mono">Parsing Extracted PDF...</p>
               </div>
             ) : (
               
@@ -354,7 +354,7 @@ export default function Workspace() {
 
                     {/* Page footer designation */}
                     <div className="bg-zinc-900/90 py-2 px-3 text-center border-t border-zinc-900 text-[11px] font-medium text-zinc-400">
-                      <span>Compiled Page {page.id}</span>
+                      <span>Page {page.id}</span>
                     </div>
                   </div>
                 ))}

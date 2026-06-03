@@ -102,7 +102,7 @@ export default function Home() {
             </h1>
             
             <p className="text-zinc-400 text-sm sm:text-base max-w-lg mx-auto leading-relaxed">
-              The ultimate secure utility to visually split and extract pages from your documents. 100% private—all operations run locally inside your browser.
+              The ultimate secure utility to visually split and extract pages from your documents.
             </p>
           </div>
 
