@@ -2,7 +2,6 @@
 
 import { useEffect, useState, useRef } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import * as pdfjsLib from "pdfjs-dist";
 import { extractPdf } from "../../services/pdf.service";
 import { PDFPageData } from "../../types/pdf";
