@@ -60,7 +60,7 @@ export default function Workspace() {
       return;
     }
 
-    setFileName(savedName);
+    Promise.resolve().then(() => setFileName(savedName));
 
    
     const loadPdfDocument = async () => {
