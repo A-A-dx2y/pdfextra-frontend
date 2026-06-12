@@ -2,6 +2,7 @@
 
 import { useState, useRef } from "react";
 import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 import { uploadPdf } from "../services/pdf.service";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -50,8 +51,8 @@ export default function Home() {
         throw new Error(result.message || "Failed to parse upload response.");
       }
     } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : "Could not connect to backend server.";
-      alert(`Upload Error: ${errorMessage}`);
+      const errMessage = error instanceof Error ? error.message : "Could not connect to backend server.";
+      toast.error(`Upload Error: ${errMessage}`);
       setUploading(false);
     }
   };
@@ -66,7 +67,7 @@ export default function Home() {
       if (droppedFile.type === "application/pdf" || droppedFile.name.endsWith(".pdf")) {
         processFile(droppedFile);
       } else {
-        alert("Please upload a valid PDF file.");
+        toast.error("Please upload a valid PDF file.");
       }
     }
   };
@@ -74,7 +75,14 @@ export default function Home() {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files && e.target.files[0]) {
       const uploadedFile = e.target.files[0];
-      processFile(uploadedFile);
+      if (uploadedFile.type === "application/pdf" || uploadedFile.name.endsWith(".pdf")) {
+        processFile(uploadedFile);
+      } else {
+        toast.error("Please upload a valid PDF file.");
+        if (fileInputRef.current) {
+          fileInputRef.current.value = "";
+        }
+      }
     }
   };
 
